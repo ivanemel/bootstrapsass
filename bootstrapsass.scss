@@ -1,0 +1,30 @@
+﻿$lg: col-lg;
+$width-one-col: 8.3333333%;
+
+@for $i from 1 to 13{
+	.#{$lg}-#{$i}{
+		flex:0 1 $width-one-col*$i;
+	}
+} 
+
+@media (max-width: 789px){
+
+	@for $i from 1 to 13{
+	.#{$lg}-#{$i}{
+		flex:0 1 100%;
+	}
+}
+	.main{
+		order: -1;
+	}
+}
+
+.container{
+	min-height: 100vh;
+}
+
+.row{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
